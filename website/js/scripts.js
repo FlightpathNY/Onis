@@ -575,6 +575,29 @@ function loadAnimation(){
 }
 
 $(document).ready(function () {
+
+    /***Detect Mobile***/
+    var isMobile = {
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
     //Smooth scroll to links (back to top)
 
     //Top Resize
@@ -592,25 +615,32 @@ $(document).ready(function () {
           }
         }
     });
-    
-    //Add youtube background player
-    if($(".player").size() > 0){
-        $(".player").videobackground({
-            videoSource: [['images/backgrounds/Onis_Lead_PEOPLE2_20LargerLogo3.mp4', 'video/mp4']], 
-            controlPosition: '.player',
-            poster: '',
-            loadedCallback: function() {
-                _videoloaded = true;
-                doneLoading();
-				//$(this).find("video").on("ended",function(){
-				
-            	setTimeout(function(){
-				   $(".video-section").addClass("show-text");
-				}, 6000);
-            }
-        });
+    if (!isMobile.any()) {
+        //Add youtube background player
+        if($(".player").size() > 0){
+            $(".player").videobackground({
+                videoSource: [['images/backgrounds/Onis_Lead_PEOPLE2_20LargerLogo3.mp4', 'video/mp4']], 
+                controlPosition: '.player',
+                poster: '',
+                resize: false,
+                loadedCallback: function() {
+                    _videoloaded = true;
+                    doneLoading();
+    				//$(this).find("video").on("ended",function(){
+    				
+                	setTimeout(function(){
+    				   $(".video-section").addClass("show-text");
+    				}, 6000);
+                }
+            });
+        } else {
+            _videoloaded = true;
+        }
     } else {
         _videoloaded = true;
+        setTimeout(function(){
+           $(".video-section").addClass("show-text");
+        }, 1000);
     }
 
     //Add height fix animation for carousel
