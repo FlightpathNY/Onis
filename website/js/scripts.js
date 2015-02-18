@@ -332,6 +332,7 @@ function tiles(){
             if(checkRow != itemsAcross){
                 $tiles.removeClass("active");
                 $section.removeClass("active");
+                $texts.removeClass("active-text");
                 closing = true;
                 $texts.css("opacity", 0);
                 $(".bio-spacer").hide();
@@ -351,7 +352,6 @@ function tiles(){
     
     function hideTile() {
         $texts.css({"height" : ''});
-        
         if(index >= 0){ 
             index = -1;
             $currentToShow = null;
@@ -360,15 +360,22 @@ function tiles(){
             $spacers.css("height", '');
             window.setTimeout(function () {
                 $spacers.remove();
+                $texts.css("opacity", 0);
             }, 600);
         }
         
         index = -1;
-        
+        $texts.css("opacity", 1);
 		window.setTimeout(function () {
-            $texts.css("opacity", 1);
+            
 			closing=false;
 		}, 600);
+        window.setTimeout(function () {
+            if (!$texts.hasClass("active-text")) {
+                $texts.css("opacity", 0);
+            }
+        }, 610);
+        
     }
     
     function whereToShowTile() {  
@@ -401,21 +408,26 @@ function tiles(){
 			var indTile = $tiles.index($(this));
 			$tiles.removeClass("active");
 			$section.removeClass("active");
+            $texts.removeClass("active-text");
 			closing = true;
 
 			var isOpened = (index == indTile);
 			var openSpeed = index >= 0 ? 600 : 0
 			hideTile();
+            
+            
 			if(!isOpened){
 				opening = true;
 				$section.addClass("active");
 				$(this).addClass("active");
+                $texts.addClass("active-text");
 				window.setTimeout(function () {
 					$currentToShow = $tilesAndText.eq(ind+1);
 					showTile();
 				}, openSpeed);
 			}
 		}
+        
     });
 
     $( window ).resize(function() { resize(); });
@@ -636,6 +648,17 @@ $(document).ready(function () {
         } else {
             _videoloaded = true;
         }
+
+        // Init ScrollMagic Controller
+        var scrollMagicController = new ScrollMagic();
+        var scrollMagicControllerParallax = new ScrollMagic({globalSceneOptions: {triggerHook: "onEnter", duration: $(window).height()*2}});
+
+        magicStaggered(scrollMagicController);
+        magicLazyText(scrollMagicController);
+        magicLazyBackground(scrollMagicController);
+        magicTopBar(scrollMagicController);
+        magicParallax(scrollMagicControllerParallax);
+        magicLettering(scrollMagicControllerParallax);
     } else {
         _videoloaded = true;
         setTimeout(function(){
@@ -645,21 +668,16 @@ $(document).ready(function () {
 
     //Add height fix animation for carousel
     bsCarouselAnimHeight();
-    
-    // Init ScrollMagic Controller
-    var scrollMagicController = new ScrollMagic();
-    var scrollMagicControllerParallax = new ScrollMagic({globalSceneOptions: {triggerHook: "onEnter", duration: $(window).height()*2}});
+    if ($(".about-carousel").size() > 0) {
+        $('.carousel').carousel();
+    }
 
-    magicStaggered(scrollMagicController);
-    magicLazyText(scrollMagicController);
-    magicLazyBackground(scrollMagicController);
-    magicTopBar(scrollMagicController);
-    magicParallax(scrollMagicControllerParallax);
-    magicLettering(scrollMagicControllerParallax);
+    
     
     //About Tiles
-    if($(".biography-section").size() > 0)
+    if($(".biography-section").size() > 0) {
         tiles();
+    }
     
     //Add smooth scrolling
     scrollWheeling(2);
