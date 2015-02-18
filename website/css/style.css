@@ -478,7 +478,7 @@ h2.bottom-bar, .h2.bottom-bar{padding-bottom:90px;}
 
 /* Video background */
 
-.oldIE .video-section .pattern-overlay, .oldIE .top-section .pattern-overlay, .oldIE .player .ui-video-background {background-color: #929292;}
+.ie8 .video-section .pattern-overlay, .ie8 .top-section .pattern-overlay, .ie8 .player .ui-video-background {background-color: #929292;}
 .oldIE .video-section .pattern-overlay.bg-transparent, .oldIE .top-section .pattern-overlay.bg-transparent {background-color:transparent;}
 .video-section .pattern-overlay, .top-section .pattern-overlay, .player .ui-video-background {background-color: rgba(71, 71, 71, 0.59); padding: 150px 0px; position: relative;}
 .top-section .pattern-overlay.home{padding:0;}
