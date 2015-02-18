@@ -629,9 +629,23 @@ $(document).ready(function () {
           }
         }
     });
-    if (!isMobile.any()) {
-        //Add youtube background player
+    if (isMobile.any()) {
+        $("body").addClass("mobi-only");
+    } else {
         $("body").removeClass("mobi-only");
+    }
+
+    if ($(".oldIE").length) {
+        $(".video-section").addClass("show-text");
+    }
+    if (isMobile.any() || $(".oldIE").length) {
+        _videoloaded = true;
+        setTimeout(function(){
+           $(".video-section").addClass("show-text");
+        }, 1000);
+    } else {
+        //Add youtube background player
+        
         if($(".player").size() > 0){
             $(".player").videobackground({
                 videoSource: [['images/backgrounds/Onis_Lead_PEOPLE2_20LargerLogo3.mp4', 'video/mp4']], 
@@ -641,11 +655,11 @@ $(document).ready(function () {
                 loadedCallback: function() {
                     _videoloaded = true;
                     doneLoading();
-    				//$(this).find("video").on("ended",function(){
-    				
-                	setTimeout(function(){
-    				   $(".video-section").addClass("show-text");
-    				}, 6000);
+                    //$(this).find("video").on("ended",function(){
+                    
+                    setTimeout(function(){
+                       $(".video-section").addClass("show-text");
+                    }, 6000);
                 }
             });
         } else {
@@ -662,12 +676,6 @@ $(document).ready(function () {
         magicTopBar(scrollMagicController);
         magicParallax(scrollMagicControllerParallax);
         magicLettering(scrollMagicControllerParallax);
-    } else {
-        $("body").addClass("mobi-only");
-        _videoloaded = true;
-        setTimeout(function(){
-           $(".video-section").addClass("show-text");
-        }, 1000);
     }
 
     //Add height fix animation for carousel

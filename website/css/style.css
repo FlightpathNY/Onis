@@ -96,6 +96,7 @@ a:hover{color:#384fb9; text-decoration:none;}
     -webkit-transition: height .4s ease; -o-transition: height .4s ease; transition: height .4s ease;
 	-webkit-transform: translateX(-50%) ; -moz-transform: translateX(-50%) ; -ms-transform: translateX(-50%) ; transform: translateX(-50%) ;
 }
+.onisno-csstransforms .btn:after, .oldIE .btn:after{-moz-transform: none; -ms-transform: none; transform: none; left: -0.5%;}
 
 .contact-block .btn{ border:0 none;padding:17px 2px;}
 
@@ -254,6 +255,11 @@ a:hover{color:#384fb9; text-decoration:none;}
 /* Navigation */
 .mask { position: fixed; top: 0; left: 0; z-index: 15; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8);}
 /* general style for all menus */
+.onisno-csstransitions nav.menu {-webkit-transition: all 0.3s;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;}
 nav.menu {
 	position: fixed; z-index: 20; background-color: #000; overflow: hidden; color:#fff; text-align: center; 
 	-webkit-transition: all 0.3s;
@@ -277,7 +283,7 @@ footer .nav-social a{margin:0 5px;}
 footer .nav-social a:hover{color:#fff;}
 
 nav.slide-menu-left { top: 0; width: 90%; min-height: 100%; left: -90%; }
-nav.slide-menu-left .menu-container{padding:0 10%; overflow:auto; height: 100%; position:relative;
+nav.slide-menu-left .menu-container{padding:0 10%; overflow:auto; height: 100%; position:relative; z-index: 99;
 	-ms-scrollbar-track-color: #fff;
 	-ms-scrollbar-darkshadow-color: #e6e6e6;
 	-ms-scrollbar-darkshadow-color: #e6e6e6;
@@ -293,7 +299,7 @@ nav.slide-menu-left .menu-container::scrollbar{width:2px;background:transparent;
 nav.slide-menu-left .menu-container::-webkit-scrollbar-thumb{background:#e6e6e6}
 nav.slide-menu-left .menu-container::scrollbar-thumb{background:#e6e6e6}
 
-body.nav-open nav.slide-menu-left {position:relative; left: 0%;}
+body.nav-open nav.slide-menu-left {position:relative; left: 0; z-index: 99;}
 body.nav-open #whole-site{ position:fixed; width:100%; }
 
 /* Close Button */
@@ -374,7 +380,7 @@ h2.bottom-bar, .h2.bottom-bar{padding-bottom:90px;}
         
 /* Letter Parallax */
 .parallax-text { position: relative; overflow: hidden; }
-.mobi-only #big1, .mobi-only #big2, .mobi-only #big3, .mobi-only #big4 {display: none;}
+.mobi-only #big1, .mobi-only #big2, .mobi-only #big3, .mobi-only #big4, .oldIE #big1, .oldIE #big2, .oldIE #big3, .oldIE #big4 {display: none;}
 #big1, #big2, #big3, #big4{font-size:220px; font-weight: 900; width:auto; display:inline-block; position: absolute; color:#000 !important;}
 
 .split-content{color:#666; background-color: #f1f1f1;}
@@ -421,13 +427,16 @@ h2.bottom-bar, .h2.bottom-bar{padding-bottom:90px;}
 }
 .oni-columns .logo-block i:before{display:table-cell; vertical-align: middle; position:relative; z-index:50}
 .oni-columns .logo-block:hover i{ color:#fff;} 
+.oldIE .oni-columns .logo-block:hover i {background: transparent;}
 .oni-columns .logo-block:after {
     content:""; width: 101%; height: 0; top: -1%; left: 50%; background:#89c0d4; position:absolute; z-index: 10;
     -webkit-transition: height .4s ease; -o-transition: height .4s ease; transition: height .4s ease;
 	-webkit-transform: translateX(-50%) ; -moz-transform: translateX(-50%) ; -ms-transform: translateX(-50%) ; transform: translateX(-50%) ;
 }
-
-.oni-columns .logo-block:hover:after{height:102%;}
+.oldIE .logo-block:after {left: -0.5%;  z-index: 21;}
+.onisno-csstransforms .oni-columns .logo-block:after {-ms-transform: none; transform: none; -moz-transform: none;}
+.oldIE .logo-block:hover:after {background:#89c0d4; z-index: 21;}
+.oni-columns .logo-block:hover:after{height:102%; }
 
 .oni-column-spacing{padding-top:60%;}
 
@@ -461,6 +470,7 @@ h2.bottom-bar, .h2.bottom-bar{padding-bottom:90px;}
 
 /* Video background */
 
+.oldIE .video-section .pattern-overlay, .oldIE .top-section .pattern-overlay, .oldIE .player .ui-video-background {background-color: #929292;}
 .video-section .pattern-overlay, .top-section .pattern-overlay, .player .ui-video-background {background-color: rgba(71, 71, 71, 0.59); padding: 150px 0px; position: relative;}
 .top-section .pattern-overlay.home{padding:0;}
 .video-section .buttonBar{display:none;}
