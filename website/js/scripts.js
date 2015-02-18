@@ -373,8 +373,10 @@ function tiles(){
         window.setTimeout(function () {
             if (!$texts.hasClass("active-text")) {
                 $texts.css("opacity", 0);
+            } else {
+                $texts.css("opacity", 1);
             }
-        }, 610);
+        }, 605);
         
     }
     
@@ -629,6 +631,7 @@ $(document).ready(function () {
     });
     if (!isMobile.any()) {
         //Add youtube background player
+        $("body").removeClass("mobi-only");
         if($(".player").size() > 0){
             $(".player").videobackground({
                 videoSource: [['images/backgrounds/Onis_Lead_PEOPLE2_20LargerLogo3.mp4', 'video/mp4']], 
@@ -660,6 +663,7 @@ $(document).ready(function () {
         magicParallax(scrollMagicControllerParallax);
         magicLettering(scrollMagicControllerParallax);
     } else {
+        $("body").addClass("mobi-only");
         _videoloaded = true;
         setTimeout(function(){
            $(".video-section").addClass("show-text");
