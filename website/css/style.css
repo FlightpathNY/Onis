@@ -65,7 +65,8 @@ p{padding-bottom:20px;}
 .color-black{color:#000;}
 .color-white{color:#FFF;}
 
-h1 .bar-bottom{display:block; display:inline-block; position:relative; padding-bottom:40px; white-space: normal;}
+h1 .bar-bottom{display:inline-block; position:relative; padding-bottom:40px; white-space: normal;}
+.ie8 h1 .bar-bottom {display:block; }
 h1 .bar-bottom:after{content:""; position:absolute; display:block; background-color: #000; height: 8px; width: 75%; bottom:15px; left:0; }
 .dark h1 .bar-bottom:after {background-color: #fff;}
 
@@ -433,9 +434,9 @@ h2.bottom-bar, .h2.bottom-bar{padding-bottom:90px;}
     position:relative; left:0; top:0; color:#000; background:#fff; width:100%; height:auto;  line-height:1%; font-size:200px; display:table-cell; vertical-align:middle; background:#fff; display:table;
     -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out;
 }
-.oni-columns .logo-block i:before{display:table-cell; vertical-align: middle; position:relative; z-index:50}
+.oni-columns .logo-block i:before{vertical-align: middle; position:relative; z-index:50}
 .oni-columns .logo-block:hover i{ color:#fff;} 
-.oldIE .oni-columns .logo-block:hover i {background: transparent;}
+.oldIE .oni-columns .logo-block:hover i {background: transparent; color:#fff;}
 .oni-columns .logo-block:after {
     content:""; width: 101%; height: 0; top: -1%; left: 50%; background:#89c0d4; position:absolute; z-index: 10;
     -webkit-transition: height .4s ease; -o-transition: height .4s ease; transition: height .4s ease;

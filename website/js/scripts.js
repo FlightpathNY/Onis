@@ -638,7 +638,7 @@ $(document).ready(function () {
     if ($(".ie8").length) {
         $(".video-section").addClass("show-text");
     }
-    if (isMobile.any() || $(".ie8").length) {
+    if (isMobile.any() || $(".ie8").length || $(".onisno-video").length) {
         _videoloaded = true;
         setTimeout(function(){
            $(".video-section").addClass("show-text");
