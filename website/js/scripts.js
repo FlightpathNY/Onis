@@ -714,7 +714,7 @@ $window.on('scroll touchmove', function () {
 
 $window.load(function() {
     _windowloaded = true;
-	
+
 	//Start loading animation
 	loadAnimation();
 	_loadinginterval = setInterval(function(){
@@ -744,7 +744,7 @@ $window.load(function() {
 	$window.on("resize", function(){
         //Top Resize
         sizeOfWindow($(".top-section .pattern-overlay.home"), 0);
-        
+
         bsCarouselAnimHeight();
 	});
 });
