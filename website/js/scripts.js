@@ -187,7 +187,6 @@ function magicLazyBackground(scrollMagicController){
 
 function doneLoading(){
 	var $preload = $(".preload");
-	
     if(_videoloaded==true && _windowloaded==true){
         if($preload.size() > 0){
 			$preload.addClass("still-loading");
@@ -648,7 +647,9 @@ $(document).ready(function () {
         
         if($(".player").size() > 0){
             $(".player").videobackground({
-                videoSource: [['images/backgrounds/Onis_Lead_PEOPLE2_20LargerLogo3.mp4', 'video/mp4']], 
+                videoSource: [['images/backgrounds/Onis_Lead_PEOPLE2_20LargerLogo3.mp4', 'video/mp4'],
+                ['images/backgrounds/Onis_Lead_PEOPLE2_20LargerLogo3_1.webm', 'video/webm'],
+                ['images/backgrounds/Onis_Lead_PEOPLE2_20LargerLogo3.ogv', 'video/ogg']], 
                 controlPosition: '.player',
                 poster: '',
                 resize: false,
