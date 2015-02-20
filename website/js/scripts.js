@@ -586,6 +586,7 @@ function loadAnimation(){
     var addNum = 0;
     var nextColor;
     var $newdiv = $('<i class="iconis-o-logo"></i>');
+    $newdiv.css("color", "#dddddd");
 	$loaderContainer.children().addClass("anim");
     $loaderContainer.prepend($newdiv);
 
@@ -604,8 +605,8 @@ function loadAnimation(){
               $newdiv.css("color", nextColor);
         }, 500);
     }
+    
     var _loadinginterval = setInterval(setColors, 1000);
-
     if(_videoloaded == true) {
         clearInterval(_loadinginterval);
     }
