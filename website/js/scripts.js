@@ -602,9 +602,9 @@ function loadAnimation(){
         timeout = setTimeout(function() {
               $(animeDiv).css("height", "0");
               $newdiv.css("color", nextColor);
-        }, 1000);
+        }, 500);
     }
-    var _loadinginterval = setInterval(setColors, 2000);
+    var _loadinginterval = setInterval(setColors, 1000);
 
     if(_videoloaded == true) {
         clearInterval(_loadinginterval);
