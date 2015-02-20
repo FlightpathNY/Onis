@@ -600,7 +600,7 @@ h2.bottom-bar, .h2.bottom-bar{padding-bottom:90px;}
 
 .carousel-indicators li{border:0 none; background:#909090;}
 .carousel-indicators .active{border:0 none; background:#161616; width:10px; height:10px; margin:1px;}
-.carousel-indicators{bottom:-100px;}
+.carousel-indicators, .ie8 .carousel-indicators{bottom:-100px;}
 
 .carousel-inner.full-width-box {height: 100%; display: block; position: relative; width: 100%;}
 .carousel-container{padding:50px 0; max-width:1300px; margin:200px auto 200px auto; height: 100%; position:relative;}
