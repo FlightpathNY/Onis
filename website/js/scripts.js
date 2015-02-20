@@ -582,9 +582,36 @@ function loadAnimation(){
 	if($loaderContainer.children().size()>1){
 		$loaderContainer.children().last().remove();
 	}
+    var multiColors = ['red', 'green', 'blue'];
+    var addNum = 0;
+    var nextColor;
+    var $newdiv = $('<i class="iconis-o-logo"></i>');
 	$loaderContainer.children().addClass("anim");
-	var $newdiv = $('<i class="iconis-o-logo" style="color:' + ("#"+((1<<24)*Math.random()|0).toString(16)) + '"></i>');
-	$loaderContainer.prepend($newdiv);
+    $loaderContainer.prepend($newdiv);
+
+    function setColors() {
+        var animeDiv = $(".iconis-o-logo.anim");
+        addNum = (addNum + 1) % multiColors.length;
+        nextColor = multiColors[addNum];
+        if (Modernizr.mq('(max-width: 749px)')) {
+            $(animeDiv).css({"color": nextColor, "height": "100px"});
+        } else {
+            $(animeDiv).css({"color": nextColor, "height": "300px"});
+        }
+
+        timeout = setTimeout(function() {
+              $(animeDiv).css("height", "0");
+              $newdiv.css("color", nextColor);
+        }, 1000);
+    }
+    var _loadinginterval = setInterval(setColors, 2000);
+
+    if(_videoloaded == true) {
+        clearInterval(_loadinginterval);
+    }
+    
+	//var $newdiv = $('<i class="iconis-o-logo" style="color:' + ("#"+((1<<24)*Math.random()|0).toString(16)) + '"></i>');
+
 }
 
 $(document).ready(function () {
@@ -637,11 +664,13 @@ $(document).ready(function () {
     if ($(".ie8").length) {
         $(".video-section").addClass("show-text");
     }
+
     if (isMobile.any() || $(".ie8").length || $(".onisno-video").length) {
         _videoloaded = true;
         setTimeout(function(){
            $(".video-section").addClass("show-text");
         }, 1000);
+
     } else {
         //Add youtube background player
         
@@ -656,8 +685,6 @@ $(document).ready(function () {
                 loadedCallback: function() {
                     _videoloaded = true;
                     doneLoading();
-                    //$(this).find("video").on("ended",function(){
-                    
                     setTimeout(function(){
                        $(".video-section").addClass("show-text");
                     }, 6000);
@@ -665,6 +692,7 @@ $(document).ready(function () {
             });
         } else {
             _videoloaded = true;
+
         }
 
         // Init ScrollMagic Controller
@@ -718,9 +746,10 @@ $window.load(function() {
 
 	//Start loading animation
 	loadAnimation();
-	_loadinginterval = setInterval(function(){
+
+	/*_loadinginterval = setInterval(function(){
 		loadAnimation();
-	}, 2000);
+	}, 2000); */
     
 	//Start Googlemaps Script
     if($('.map-box').size() > 0)
@@ -736,7 +765,7 @@ $window.load(function() {
             doneLoading();
         }
     } else{
-		clearInterval(_loadinginterval);
+		// clearInterval(_loadinginterval);
         $(".preload").remove();
         $("#whole-site").removeClass("loading");
         setCookie("loaded", "true", .25); 

@@ -674,7 +674,7 @@ form{padding-top:20px;}
 	
 
 	.preload .iconis-o-logo{font-size:70px; width:52px; height:100px; margin:-50px 0 0 -26px;}
-	.preload .anim.iconis-o-logo:last-child{width:0px;}
+	.preload .anim.iconis-o-logo:last-child{}
 	.perspect-icons i {font-size: 110px;}
     
 }
