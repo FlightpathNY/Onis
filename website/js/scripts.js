@@ -586,13 +586,12 @@ function loadAnimation(){
     var addNum = 0;
     var nextColor;
     var $newdiv = $('<i class="iconis-o-logo"></i>');
-    //$newdiv.css("color", "#dddddd");
 	$loaderContainer.children().addClass("anim");
     $loaderContainer.prepend($newdiv);
+
     firstLoad = setTimeout(function() {
       $newdiv.css("color", multiColors[0]);
     }, 10);
-
     function setColors() {
         clearInterval(firstLoad);
         var animeDiv = $(".iconis-o-logo.anim");
