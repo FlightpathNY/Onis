@@ -620,6 +620,14 @@ function loadAnimation(){
 
 $(document).ready(function () {
 
+    var isFF = !!navigator.userAgent.match(/firefox/i);
+
+    if (isFF) {
+        $('body').addClass("moz");
+    } else {
+        $('body').removeClass("moz");
+    }
+
     /***Detect Mobile***/
     var isMobile = {
         Android: function () {
