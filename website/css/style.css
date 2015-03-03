@@ -449,6 +449,26 @@ h2.bottom-bar, .h2.bottom-bar{padding-bottom:90px;}
 
 .oni-column-spacing{padding-top:60%;}
 
+/* Partners blocks */
+
+.bg-pattern-grey {background-color: #a4aeb2; background-image:url(../images/partners/Fine-Halftone-Screen-Small.png);}
+.oni-columns.partners {padding-bottom: 198px;}
+.oni-columns.partners .bottom-spacing.extra {padding-bottom: 88px;}
+.partners-block {padding-top: 98px;}
+.partners-block .bottom-bar:after {background-color: #d6cda1;}
+.oni-columns.partners .logo-block {margin-top:0; padding: 0;}
+.oni-columns.partners .logo-block i {background-color: #fff; background-image:url(../images/partners/joes-logo.png); background-size: contain; background-repeat: no-repeat; background-position: center; display: block; height: 100%; padding-top: 50%; padding-bottom: 50%;}
+.oni-columns.partners .logo-block i.p2 {background-image:url(../images/partners/maxim-logo.png);}
+.oni-columns.partners .logo-block i.p3 {background-image:url(../images/partners/bcbg-logo.png);}
+.oni-columns.partners .logo-block i.p4 {background-image:url(../images/partners/timo-weiland-logo.png);}
+
+.oni-columns.partners .logo-block:after {background-color:#3a4990;}
+.oni-columns.partners .logo-block:hover i {background-image:url(../images/partners/joes-logo-white.png); background-color: transparent; z-index:50;}
+.oni-columns.partners .logo-block:hover i.p2 {background-image:url(../images/partners/maxim-logo-white.png);}
+.oni-columns.partners .logo-block:hover i.p3 {background-image:url(../images/partners/bcbg-logo-white.png);}
+.oni-columns.partners .logo-block:hover i.p4 {background-image:url(../images/partners/timo-weiland-logo-white.png);}
+
+
 /* Rotating Quotes */
 .carousel-quote {background:#333;}
 .carousel-quote .carousel-control{
@@ -676,6 +696,10 @@ form{padding-top:20px;}
 	.preload .iconis-o-logo{font-size:70px; width:52px; height:100px; margin:-50px 0 0 -26px;}
 	.preload .anim.iconis-o-logo:last-child{}
 	.perspect-icons i {font-size: 110px;}
+	.oni-columns.partners {padding-bottom: 125px;}
+	.oni-columns.partners .bottom-spacing.extra {padding-bottom: 60px;}
+	.oni-columns.partners .logo-block {margin-bottom: 70px;}
+	.oni-columns.partners .logo-block i {padding-top: 25%; padding-bottom: 25%;}
     
 }
 
