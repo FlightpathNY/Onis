@@ -470,10 +470,10 @@ h2.bottom-bar, .h2.bottom-bar{padding-bottom:90px;}
 .partners-block .bottom-bar:after {background-color: #d6cda1;}
 .oni-columns.partners .logo-block {margin-top:0; padding: 0;}
 .oni-columns.partners .logo-block i {background-color: transparent; background-repeat: no-repeat; background-position: center center;  height: 100%; padding-top: 50%; padding-bottom: 50%; -webkit-transition: none 0.3s ease-in-out; -o-transition: none 0.3s ease-in-out; transition: none 0.3s ease-in-out;}
-.oni-columns.partners .logo-block i.p1 {display: block; background-image:url(../images/partners/joes-logo.png); }
+.oni-columns.partners .logo-block i.p1 {display: block; background-image:url(../images/partners/joes-logo.png); background-size: contain;}
 .oni-columns.partners .logo-block i.p2 {background-image:url(../images/partners/maxim-logo.svg); display: block; background-size: 80%; }
 .oni-columns.partners .logo-block i.p3 {background-image:url(../images/partners/bcbg-logo.svg); display: block; background-size: 80%; }
-.oni-columns.partners .logo-block i.p4 {background-image:url(../images/partners/timo-weiland-logo.png); display: block;}
+.oni-columns.partners .logo-block i.p4 {background-image:url(../images/partners/timo-weiland-logo.png); display: block; background-size: contain;}
 
 .oni-columns.partners .logo-block:after {background:#3a4990; }
 .oni-columns.partners .logo-block:hover i { background-color: transparent; z-index:50; }
