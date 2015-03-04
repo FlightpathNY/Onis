@@ -11,11 +11,23 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "partners-font-1";
+  src:url("../fonts/partners-font-1.eot");
+  src:url("../fonts/partners-font-1.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/partners-font-1.woff") format("woff"),
+    url("../fonts/partners-font-1.ttf") format("truetype"),
+    url("../fonts/partners-font-1.svg#partners-font-1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .oldIE {
     -pie-load-path: "/PIE_IE678.js"; 
 }
 
  [class^="iconis-"]:before, [class*=" iconis-"]:before {font-family: "onis"; font-style: normal; font-weight: normal; speak: none; display: inline-block; text-decoration: inherit; text-align: center; font-variant: normal; text-transform: none; line-height: 1em;}
+
  
 .iconis-arrow-left:before { content: '\e805'; }
 .iconis-arrow-right:before { content: '\e806'; }
@@ -431,7 +443,7 @@ h2.bottom-bar, .h2.bottom-bar{padding-bottom:90px;}
 .oni-columns h4{padding:40px; color:#fff;}
 .oni-columns .logo-block{background:#fff; height:100%; position:relative; z-index: 20; padding-top: 21.6%; padding-bottom: 21.6%; margin-top:-50%; display:block;}
 .oni-columns .logo-block i{
-    position:relative; left:0; top:0; color:#000; background:#fff; width:100%; height:auto;  line-height:1%; font-size:200px; display:table-cell; vertical-align:middle; background:#fff; display:table;
+    position:relative; left:0; top:0; color:#000; background:#fff; width:100%; height:auto;  line-height:1%; font-size:200px; vertical-align:middle; background:#fff; display:table;
     -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out;
 }
 .oni-columns .logo-block i:before{vertical-align: middle; position:relative; z-index:50}
@@ -457,17 +469,23 @@ h2.bottom-bar, .h2.bottom-bar{padding-bottom:90px;}
 .partners-block {padding-top: 98px;}
 .partners-block .bottom-bar:after {background-color: #d6cda1;}
 .oni-columns.partners .logo-block {margin-top:0; padding: 0;}
-.oni-columns.partners .logo-block i {background-color: transparent; background-image:url(../images/partners/joes-logo.png); background-size: contain; background-repeat: no-repeat; background-position: center; display: block; height: 100%; padding-top: 50%; padding-bottom: 50%;}
-.oni-columns.partners .logo-block i.p2 {background-image:url(../images/partners/maxim-logo.png);}
-.oni-columns.partners .logo-block i.p3 {background-image:url(../images/partners/bcbg-logo.png);}
-.oni-columns.partners .logo-block i.p4 {background-image:url(../images/partners/timo-weiland-logo.png);}
+.oni-columns.partners .logo-block i {background-color: transparent; background-repeat: no-repeat; background-position: center center;  height: 100%; padding-top: 50%; padding-bottom: 50%; -webkit-transition: none 0.3s ease-in-out; -o-transition: none 0.3s ease-in-out; transition: none 0.3s ease-in-out;}
+.oni-columns.partners .logo-block i.p1 {display: block; background-image:url(../images/partners/joes-logo.png); }
+.oni-columns.partners .logo-block i.p2 {background-image:url(../images/partners/maxim-logo.svg); display: block; background-size: 80%; }
+.oni-columns.partners .logo-block i.p3 {background-image:url(../images/partners/bcbg-logo.svg); display: block; background-size: 80%; }
+.oni-columns.partners .logo-block i.p4 {background-image:url(../images/partners/timo-weiland-logo.png); display: block;}
 
-.oni-columns.partners .logo-block:after {background:#3a4990;}
-.oni-columns.partners .logo-block:hover i {background-image:url(../images/partners/joes-logo-white.png); background-color: transparent; z-index:50; background-size: contain;}
-.oni-columns.partners .logo-block:hover i.p2 {background-image:url(../images/partners/maxim-logo-white.png);}
-.oni-columns.partners .logo-block:hover i.p3 {background-image:url(../images/partners/bcbg-logo-white.png);}
+.oni-columns.partners .logo-block:after {background:#3a4990; }
+.oni-columns.partners .logo-block:hover i { background-color: transparent; z-index:50; }
+.oni-columns.partners .logo-block:hover i.p1 {background-image:url(../images/partners/joes-logo-white.png);}
+.oni-columns.partners .logo-block:hover i.p2 {background-image:url(../images/partners/maxim-logo-white.svg); display: block;}
+.oni-columns.partners .logo-block:hover i.p3 {background-image:url(../images/partners/bcbg-logo-white.svg); display: block;}
 .oni-columns.partners .logo-block:hover i.p4 {background-image:url(../images/partners/timo-weiland-logo-white.png);}
 
+.ie8 .oni-columns.partners .logo-block i.p2 {background-image:url(../images/partners/maxim-logo.png);}
+.ie8 .oni-columns.partners .logo-block i.p3 {background-image:url(../images/partners/bcbg-logo.png);}
+.ie8 .oni-columns.partners .logo-block:hover i.p2 {background-image:url(../images/partners/maxim-logo-white.png);}
+.ie8 .oni-columns.partners .logo-block:hover i.p3 {background-image:url(../images/partners/bcbg-logo-white.png);}
 
 /* Rotating Quotes */
 .carousel-quote {background:#333;}
