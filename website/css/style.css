@@ -476,10 +476,10 @@ h2.bottom-bar, .h2.bottom-bar{padding-bottom:90px;}
 .oni-columns.partners .logo-block i.p4 {background-image:url(../images/partners/timo-weiland-logo.png); display: block; background-size: contain;}
 
 .oni-columns.partners .logo-block:after {background:#3a4990; }
-.oni-columns.partners .logo-block:hover i { background-color: transparent; z-index:50; }
+.oni-columns.partners .logo-block:hover i { background-color: transparent; z-index:50; background-repeat: no-repeat; background-position: center center;}
 .oni-columns.partners .logo-block:hover i.p1 {background-image:url(../images/partners/joes-logo-white.png);}
-.oni-columns.partners .logo-block:hover i.p2 {background-image:url(../images/partners/maxim-logo-white.svg); display: block;}
-.oni-columns.partners .logo-block:hover i.p3 {background-image:url(../images/partners/bcbg-logo-white.svg); display: block;}
+.oni-columns.partners .logo-block:hover i.p2 {background-image:url(../images/partners/maxim-logo-white.svg); display: block; background-size: 80%;}
+.oni-columns.partners .logo-block:hover i.p3 {background-image:url(../images/partners/bcbg-logo-white.svg); display: block; background-size: 80%;}
 .oni-columns.partners .logo-block:hover i.p4 {background-image:url(../images/partners/timo-weiland-logo-white.png);}
 
 .ie8 .oni-columns.partners .logo-block i.p2 {background-image:url(../images/partners/maxim-logo.png);}
@@ -718,6 +718,7 @@ form{padding-top:20px;}
 	.oni-columns.partners .bottom-spacing.extra {padding-bottom: 60px;}
 	.oni-columns.partners .logo-block {margin-bottom: 70px;}
 	.oni-columns.partners .logo-block i {padding-top: 25%; padding-bottom: 25%;}
+	.oni-columns.partners .logo-block i.p2, .oni-columns.partners .logo-block i.p3 {background-size: 50%;}
     
 }
 
