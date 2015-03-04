@@ -722,12 +722,12 @@ form{padding-top:20px;}
 }
 
 @media screen and (max-width: 581px) {
-	.svg .oni-columns.partners .logo-block i.p2 {width: 260px; height: 49.5px; margin: 0 auto;}
-	.svg .oni-columns.partners .logo-block i.p3 {width: 260px; height: 49.5px; margin: 0 auto;}
+	.oni-columns.partners .logo-block i.p2 {width: 260px; height: 49.5px; margin: 0 auto; background-size: contain;}
+	.oni-columns.partners .logo-block i.p3 {width: 260px; height: 49.5px; margin: 0 auto;}
 }
 
 @media screen and (max-width: 481px) {
 	.mobi.col-xs-6 {width: 100%;}
-	.svg .oni-columns.partners .logo-block i.p2 {width: 200px; height: 38.1px; margin: 0 auto;}
-	.svg .oni-columns.partners .logo-block i.p3 {width: 200px; height: 38.1px; margin: 0 auto;}
+	.oni-columns.partners .logo-block i.p2 {width: 160px; height: 30.4px; margin: 0 auto; background-size: contain;}
+	.oni-columns.partners .logo-block i.p3 {width: 200px; height: 38.1px; margin: 0 auto;}
 }
