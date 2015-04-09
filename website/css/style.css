@@ -136,8 +136,14 @@ a:hover{color:#384fb9; text-decoration:none;}
 .purple, i.purple:before{color:#716cd0;}
 .pink, i.pink:before{color:#d182c3;}
 .green, i.green:before{color:#21ECB9;}
-
+.greenish, i.greenish:before {color: #8ea366;}
+.bluish, i.bluish:before {color: #004b55;}
 .dark.color-dark, .dark.color-dark h4{color: #666;}
+.bluishlight, i.bluishlight:before {color: #236770;}
+.greenishlight, i.greenishlight:before {color: #76aca9;}
+.greenlight, i.greenlight:before {color: #8ea366;}
+.purpleish, i.purpleish:before {color: #646176;}
+
 
 #whole-site{opacity:1; 
     -webkit-transition: opacity 1s ease; -o-transition: opacity 1s ease; transition: opacity 1s ease;
@@ -394,6 +400,7 @@ h2.bottom-bar, .h2.bottom-bar{padding-bottom:90px;}
 .section1-fullbgimage > div{background:url(/images/backgrounds/global-boutique/image-parrallax-1.jpg) no-repeat; }
 .section2-fullbgimage > div{background:url(/images/backgrounds/global-boutique/image-parrallax-2.jpg) no-repeat; }
 .parallax-background { position: relative; overflow: hidden; height:300px;}
+.parallax-background.parallax-lgbackground { position: relative; overflow: hidden; height:400px;}
 .parallax-background .parallaxbg { position: absolute; height: 140%; top:0%; width: 100%; background-size: cover;}
 .oldIE .parallax-background .parallaxbg {behavior: url(PIE.htc);}
 .oldIE .section1-fullbgimage > div{behavior: url(PIE.htc); -pie-background: #fff url(/images/backgrounds/global-boutique/image-parrallax-1.jpg) no-repeat left top / cover;}
