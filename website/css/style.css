@@ -448,7 +448,7 @@ h2.bottom-bar, .h2.bottom-bar{padding-bottom:90px;}
 /* Home box logos and columns */
 .oni-columns{font-size:16px; line-height:1.8; color:#ccc;}
 .oni-columns h4{padding:40px; color:#fff;}
-.oni-columns .logo-block{background:#fff; height:100%; position:relative; z-index: 20; padding-top: 21.6%; padding-bottom: 21.6%; margin-top:-30%; display:block; overflow: hidden}
+.oni-columns .logo-block{background:#fff; height:100%; position:relative; z-index: 20; padding-top: 21.6%; padding-bottom: 21.6%; margin-top:-13%; display:block; overflow: hidden}
 .oni-columns .logo-block i{
     position:relative; left:0; top:0; color:#000; background:#fff; width:100%; height:auto;  line-height:1%; font-size:200px; vertical-align:middle; background:#fff; display:table;
     -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out;
