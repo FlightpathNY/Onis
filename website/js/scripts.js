@@ -582,7 +582,7 @@ function loadAnimation(){
 	if($loaderContainer.children().size()>1){
 		$loaderContainer.children().last().remove();
 	}
-    var multiColors = ['red', 'green', 'blue'];
+    var multiColors = ['#ceb979','#79aba9','#0f4b53','#4458a0','#8ea06a','#656173','#a4aeb2'];
     var addNum = 0;
     var nextColor;
     var $newdiv = $('<i class="iconis-o-logo"></i>');
