@@ -685,12 +685,13 @@ $(document).ready(function () {
 
     } else {
         //Add youtube background player
+        var videoname = "images/backgrounds/onis_final_may_18B";
         
         if($(".player").size() > 0){
             $(".player").videobackground({
-                videoSource: [['images/backgrounds/Onis_Lead_PEOPLE2_20LargerLogo3.mp4', 'video/mp4'],
-                ['images/backgrounds/Onis_Lead_PEOPLE2_20LargerLogo3_1.webm', 'video/webm'],
-                ['images/backgrounds/Onis_Lead_PEOPLE2_20LargerLogo3.ogv', 'video/ogg']], 
+                videoSource: [[videoname + '.mp4', 'video/mp4'],
+                [videoname + '.webm', 'video/webm'],
+                [videoname + '.ogv', 'video/ogg']], 
                 controlPosition: '.player',
                 poster: '',
                 resize: false,
@@ -704,7 +705,6 @@ $(document).ready(function () {
             });
         } else {
             _videoloaded = true;
-
         }
 
         // Init ScrollMagic Controller
