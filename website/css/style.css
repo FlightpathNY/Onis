@@ -184,20 +184,7 @@ a:hover{color:#384fb9; text-decoration:none;}
 	-o-transition: color .5s;
 	transition: color .5s;
 }
-.startPage .logo-main a i{color:#fff;
-	-webkit-transition: none;
-	-moz-transition: none;
-	-ms-transition: none;
-	-o-transition: none;
-	transition: none;
-}
-.startPage .logo-main a i:first-child, .logo-main i:first-child{position:absolute; height:0; overflow: hidden;
-	-webkit-transition: height .5s;
-	-moz-transition: height .5s;
-	-ms-transition: height .5s;
-	-o-transition: height .5s;
-	transition: height .5s;
-}
+.startPage .logo-main a i{color:#fff;}
 .logo-main:hover i:first-child, .startPage .logo-main a i:first-child{ height:50px;}
 
 .emphasis{font-size: 31px; font-style: italic;}
