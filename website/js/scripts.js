@@ -694,6 +694,7 @@ $(document).ready(function () {
                 [videoname + '.ogv', 'video/ogg']], 
                 controlPosition: '.player',
                 poster: '',
+				loop: true,
                 resize: false,
                 loadedCallback: function() {
                     _videoloaded = true;
